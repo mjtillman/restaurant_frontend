@@ -6,152 +6,62 @@
     <title>Ming's Diner - Menu</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/6560c89160.js" crossorigin="anonymous"></script>
-    <style>
-        :root {
-            --bs-blue: #0d6efd;
-            --bs-indigo: #6610f2;
-            --bs-purple: #6f42c1;
-            --bs-pink: #d63384;
-            --bs-red: #dc3545;
-            --bs-orange: #fd7e14;
-            --bs-yellow: #ffc107;
-            --bs-green: #198754;
-            --bs-teal: #20c997;
-            --bs-cyan: #0dcaf0;
-            --bs-white: #fff;
-            --bs-gray: #6c757d;
-            --bs-gray-dark: #343a40;
-            --bs-primary: #0d6efd;
-            --bs-secondary: #6c757d;
-            --bs-success: #198754;
-            --bs-info: #0dcaf0;
-            --bs-warning: #ffc107;
-            --bs-danger: #dc3545;
-            --bs-light: #f8f9fa;
-            --bs-dark: #212529;
-            --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-            --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-            --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-        }
-
-        nav {
-
-            background-color: var(--bs-gray-dark) !important;
-        }
-
-        .nav-item {
-            color: var(--bs-light) !important;
-        }
-
-        h5 {
-            margin-bottom: 0.15em !important;
-   
-        }
-
-        h6 {
-            font-weight: lighter;
-            font-style: italic;
-        }
-
-        ul {
-            padding: 0px;
-        }
-
-        li{
-            list-style-type: none;
-        }
-
-        .product_title {
-            font-weight: lighter;
-        
-        }
-
-        img {
-            width: 100px;
-            height: 100px;
-        }
-
-        .price {
-            font-size: small !important;
-        }
-
-        p {
-            font-size: 0.8em;
-            line-height: 1.1em;
-
-        }
-
-        footer {
-            color: var(--bs-light) !important;
-            background-color: var(--bs-gray-dark) !important;
-        }
-
-        footer > a {
-            color: var(--bs-light) !important;
-        }
-
-        #icons {
-            max-width: 300px !important;
-            color: var(--bs-gray) !important;
-        }
-
-    </style>
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 <nav class="navbar navbar-dark sticky-top px-3">
     <a class="navbar-brand">Ming's Diner</a>
     <form class="nav-item">
-        <button class="btn btn-sm btn-outline-light" type="button"
-            data-bs-toggle="button">Menu</button>
-        <button class="btn btn-sm btn-outline-light" type="button"
-            data-bs-toggle="button">Contact</button>
+        <a href="index.html" class="btn btn-sm btn-outline-light" role="button">Home</a>
+        <a href="menu.html" class="btn btn-sm btn-outline-light" role="button">Our Menu</a>
+        <a href="contact.html" class="btn btn-sm btn-outline-light" role="button">Contact</a>
     </form>
 </nav>
 <body class="p-0">
-<main class="container-fluid">
-    <main class="container-fluid">
-        <div class="row">
-            <div class="col-12 p-0">
-                <div id="carousel" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active" id="pancakes">
-                            <img src="pancakes.jpeg" class="d-block w-100" alt="eggs">
-                        </div>
-                        <div class="carousel-item" id="hamburger">
-                            <img src="hamburger-fries.jpeg" class="d-block w-100" alt="burger">
-                        </div>
-                        <div class="carousel-item" id="chicken">
-                            <img src="southern.jpeg" class="d-block w-100" alt="steak">
-                        </div>
+<main class="px-5">
+    <div class="card mx-auto mt-5">
+        <div class="card-body">
+            <h5 class="card-title mb-3">Send Ming's Diner a line!</h5>
+            <div class="card-text">
+                <form action="#">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                </div>
+                <div class="mb-3 row">
+                    <div class="col-6">
+                        <label for="first" class="form-label">First name</label>
+                        <input type="text" class="form-control" id="first" placeholder="First name">
+                    </div>
+                    <div class="col-6">
+                        <label for="last" class="form-label">Last name</label>
+                        <input type="text" class="form-control" id="last" placeholder="Last name">
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <div class="d-grid col-6 mx-auto text-center">
-                    <h1 class="mt-3">Ming's Diner</h1>
-                    <p><em>Open 24 hours</em></p>
-    
-                    <p>111 Broadway St<br />
-                    Schertz, TX</p>
-                    <p>(210) 867-5309</p>
-            
-                    <button class="btn btn-sm btn-warning mt-2" type="button">
-                        View Ming's Menu >
-                    </button>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" placeholder="Write your message here..." rows="3"></textarea>
+                
                 </div>
             </div>
         </div>
-    </main>
+        <div class="card-footer text-center">
+            <input type="reset" value="Submit" class="btn btn-primary"></input>
+            </form>
+        </div>
+      </div>
+
 </main>
+
+
+
 <footer class="container-fluid mt-5 p-5">
     <div class="row">
         <div class="col-12 text-center">
             <p>Check us out on social media!</p>
             <div class="d-flex flex-row mx-auto justify-content-around" id="icons">
-                <a href="#"><i class="fab fa-twitter fa-3x"></i></a>
-                <a href="#"><i class="fab fa-facebook fa-3x"></i></a>
-                <a href="#"><i class="fab fa-instagram fa-3x"></i></a>
+                <a href="#" class="link-light"><i class="fab fa-twitter fa-3x"></i></a>
+                <a href="#" class="link-light"><i class="fab fa-facebook fa-3x"></i></a>
+                <a href="#" class="link-light"><i class="fab fa-instagram fa-3x"></i></a>
             </div>
         </div>
     </div>
